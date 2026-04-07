@@ -1,0 +1,56 @@
+[build]
+  publish = "."
+
+# ============================================================
+# DOMAIN CANONICALIZATION
+# Force HTTPS + non-www on production domain.
+# Netlify automatically handles HTTP→HTTPS, but we declare
+# the www → non-www 301 redirect explicitly so SEO crawlers
+# see a single canonical hostname.
+# ============================================================
+
+[[redirects]]
+  from = "https://www.kalud.cl/*"
+  to = "https://kalud.cl/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.kalud.cl/*"
+  to = "https://kalud.cl/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://kalud.cl/*"
+  to = "https://kalud.cl/:splat"
+  status = 301
+  force = true
+
+# ============================================================
+# SECURITY & CACHE HEADERS
+# ============================================================
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/content/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
