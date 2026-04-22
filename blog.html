@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
   <title>Blog Deportivo | Quiropraxia, Kinesiología y Rendimiento | Kalud</title>
   <meta name="description" content="Blog de salud y rendimiento deportivo. Artículos sobre quiropraxia deportiva, kinesiología, nutrición y entrenamiento escritos por los especialistas de Kalud.">
   <meta name="keywords" content="blog deportivo chile, quiropraxia artículos, kinesiología blog, nutrición deportiva artículos, salud deportiva chile, rehabilitación deportiva blog">
   <link rel="canonical" href="https://kalud.cl/blog.html">
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="content/img/favicon/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="content/img/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="content/img/favicon/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="content/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="content/img/favicon/faviconoficialtrans.png">
+  
+  
+  <link rel="apple-touch-icon" href="content/img/favicon/faviconoficialtrans.png">
   <link rel="manifest" href="content/img/favicon/site.webmanifest">
   <link rel="alternate" hreflang="es-CL" href="https://kalud.cl/blog.html">
   <link rel="alternate" hreflang="es" href="https://kalud.cl/blog.html">
@@ -85,6 +86,38 @@
         "author": { "@type": "Person", "name": "Bernardita Velasco" },
         "datePublished": "2026-03-10",
         "description": "Qué comer antes de entrenar según tu tipo de ejercicio, cuánto tiempo antes y qué evitar para rendir al máximo."
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Dolor lumbar en runners: causas, diagnóstico y tratamiento",
+        "url": "https://kalud.cl/blog/dolor-lumbar-en-runners.html",
+        "author": { "@type": "Person", "name": "Iñaki Achondo" },
+        "datePublished": "2026-03-17",
+        "description": "Guía clínica sobre el dolor lumbar en corredores: causas biomecánicas, señales de alerta y tratamiento basado en evidencia."
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Cómo periodizar tu entrenamiento para una carrera de 10K",
+        "url": "https://kalud.cl/blog/periodizar-entrenamiento-10k.html",
+        "author": { "@type": "Person", "name": "Francisco Orellana" },
+        "datePublished": "2026-03-24",
+        "description": "Guía paso a paso para periodizar tu entrenamiento de cara a un 10K: bloques, distribución 80/20, plan de 12 semanas y tapering."
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Tendinitis rotuliana en ciclistas: guía completa de rehabilitación",
+        "url": "https://kalud.cl/blog/tendinitis-rotuliana-ciclistas.html",
+        "author": { "@type": "Person", "name": "Clemente Mewes" },
+        "datePublished": "2026-03-31",
+        "description": "Causas, diagnóstico y tratamiento basado en evidencia de la tendinopatía rotuliana en ciclistas: HSR, isométricos y bike fit."
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Suplementos para deportistas: qué funciona y qué no",
+        "url": "https://kalud.cl/blog/suplementos-deportivos-que-funciona.html",
+        "author": { "@type": "Person", "name": "Bernardita Velasco" },
+        "datePublished": "2026-04-07",
+        "description": "Guía honesta sobre los suplementos deportivos con respaldo científico real y los que son puro marketing."
       }
     ]
   }
@@ -108,47 +141,42 @@
   <div id="nav-placeholder"></div>
 
   <main>
-    <!-- BREADCRUMB -->
-    <div class="breadcrumb">
-      <div class="container">
-        <nav aria-label="Breadcrumb">
-          <ol class="breadcrumb__list">
-            <li><a href="index.html">Inicio</a></li>
-            <li aria-hidden="true">›</li>
-            <li><span aria-current="page">Blog</span></li>
-          </ol>
-        </nav>
-      </div>
-    </div>
-
     <!-- HERO -->
-    <section class="page-hero page-hero--blog">
+    <section class="page-hero">
       <div class="container">
         <div class="page-hero__content reveal">
           <span class="page-hero__tag">Kalud Blog</span>
           <h1 class="page-hero__title">Blog de Salud y <span class="text-blue">Rendimiento Deportivo</span></h1>
-          <p class="page-hero__desc">Conocimiento para rendir mejor. Artículos escritos por los especialistas de Kalud sobre quiropraxia, kinesiología, nutrición y entrenamiento. Información práctica y basada en evidencia para deportistas.</p>
+          <p class="page-hero__desc">Como expertos en salud deportiva, nuestro objetivo no es solo tratar — es informar. Por eso nuestros especialistas escriben regularmente sobre quiropraxia, kinesiología, nutrición y entrenamiento: artículos con evidencia clínica real, para que puedas cuidarte y rendir mejor.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORY FILTER -->
+    <section class="blog-filter-bar">
+      <div class="container">
+        <div class="blog-filter__inner">
+          <span class="blog-filter__label">Blogs por categoría</span>
+          <div class="blog-filter__pills">
+            <button class="blog-filter__pill blog-filter__pill--active" data-filter="todos">Todos</button>
+            <button class="blog-filter__pill" data-filter="Quiropraxia">Quiropraxia</button>
+            <button class="blog-filter__pill" data-filter="Kinesiología">Kinesiología</button>
+            <button class="blog-filter__pill" data-filter="Nutrición">Nutrición</button>
+            <button class="blog-filter__pill" data-filter="Entrenamiento">Entrenamiento</button>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- FEATURED ARTICLE -->
-    <section class="section">
+    <section class="section" id="featured-section">
       <div class="container">
         <div class="section-header reveal">
           <span class="section-tag">Artículo destacado</span>
         </div>
         <a href="blog/que-es-la-quiropraxia-deportiva.html" class="blog-featured reveal">
           <div class="blog-featured__visual">
-            <div class="blog-card-visual blog-card-visual--quiro">
-              <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect width="200" height="150" fill="#f0fbff"/>
-                <circle cx="100" cy="75" r="50" fill="#09B7FF" opacity="0.15"/>
-                <path d="M80 50 Q100 35 120 50 Q130 65 120 80 Q100 95 80 80 Q70 65 80 50Z" fill="#09B7FF" opacity="0.4"/>
-                <circle cx="100" cy="65" r="12" fill="#09B7FF"/>
-                <path d="M88 90 Q100 110 112 90" fill="none" stroke="#09B7FF" stroke-width="3" stroke-linecap="round"/>
-              </svg>
-            </div>
+            <img src="content/img/espaldasubreal.jpg" alt="Quiropraxia deportiva" style="width:100%;height:100%;object-fit:cover;">
           </div>
           <div class="blog-featured__content">
             <div class="blog-card__meta">
@@ -157,10 +185,10 @@
               <span class="blog-card__read">8 min de lectura</span>
             </div>
             <h2>¿Qué es la quiropraxia deportiva y para qué sirve?</h2>
-            <p>Todo lo que necesitas saber sobre la quiropraxia deportiva: qué es, cómo funciona, para qué lesiones sirve y cuándo es el momento de consultar. Explicado por Iñaki Achondo, quiropraxista director de Kalud.</p>
+            <p>Todo lo que necesitas saber sobre la quiropraxia deportiva: qué es, cómo funciona, para qué lesiones sirve y cuándo es el momento de consultar. Explicado por Iñaki Achondo, quiropráctico deportivo director de Kalud.</p>
             <div class="blog-card__author">
               <div class="author-avatar">IA</div>
-              <span>Iñaki Achondo — Quiropraxista Deportivo</span>
+              <span>Iñaki Achondo — Quiropráctico Deportivo</span>
             </div>
             <span class="blog-featured__cta">Leer artículo completo →</span>
           </div>
@@ -177,24 +205,37 @@
         </div>
         <div class="blog-grid reveal">
 
-          <a href="blog/esguince-de-tobillo-rehabilitacion.html" class="blog-card">
-            <div class="blog-card__visual blog-card-visual--kinesio">
-              <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect width="300" height="200" fill="#f0fbff"/>
-                <path d="M80 100 Q150 60 220 100 Q220 140 150 160 Q80 140 80 100Z" fill="#09B7FF" opacity="0.2"/>
-                <path d="M100 110 Q150 85 200 110" fill="none" stroke="#09B7FF" stroke-width="4" stroke-linecap="round"/>
-                <circle cx="150" cy="110" r="20" fill="#09B7FF" opacity="0.3"/>
-                <circle cx="150" cy="110" r="10" fill="#09B7FF"/>
-              </svg>
+          <a href="blog/suplementos-deportivos-que-funciona.html" class="blog-card" data-category="Nutrición">
+            <div class="blog-card__visual">
+              <img src="content/img/suplementacionblog.png" alt="Suplementos deportivos" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span class="blog-card__category">Nutrición</span>
+                <span class="blog-card__date">7 Abr 2026</span>
+                <span class="blog-card__read">11 min</span>
+              </div>
+              <h3>Suplementos para deportistas: qué funciona y qué no</h3>
+              <p>Guía honesta basada en evidencia: cuáles tienen respaldo científico real, cuáles son puro marketing y cómo elegir.</p>
+              <div class="blog-card__author">
+                <div class="author-avatar">BV</div>
+                <span>Bernardita Velasco — Nutricionista</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="blog/tendinitis-rotuliana-ciclistas.html" class="blog-card" data-category="Kinesiología">
+            <div class="blog-card__visual">
+              <img src="content/img/tendinitisblog.jpg" alt="Tendinitis rotuliana en ciclistas" style="width:100%;height:100%;object-fit:cover;">
             </div>
             <div class="blog-card__content">
               <div class="blog-card__meta">
                 <span class="blog-card__category">Kinesiología</span>
-                <span class="blog-card__date">24 Feb 2026</span>
-                <span class="blog-card__read">10 min</span>
+                <span class="blog-card__date">31 Mar 2026</span>
+                <span class="blog-card__read">12 min</span>
               </div>
-              <h3>Esguince de tobillo: cómo rehabilitarlo correctamente</h3>
-              <p>Guía completa de rehabilitación: fases de recuperación, ejercicios recomendados y señales de cuándo volver al deporte.</p>
+              <h3>Tendinitis rotuliana en ciclistas: guía completa</h3>
+              <p>Diagnóstico, tratamiento basado en evidencia, ejercicios HSR e isométricos, bike fit y vuelta a la bici sin recaídas.</p>
               <div class="blog-card__author">
                 <div class="author-avatar">CM</div>
                 <span>Clemente Mewes — Kinesiólogo</span>
@@ -202,16 +243,47 @@
             </div>
           </a>
 
-          <a href="blog/que-comer-antes-de-entrenar.html" class="blog-card">
-            <div class="blog-card__visual blog-card-visual--nutricion">
-              <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect width="300" height="200" fill="#f0fbff"/>
-                <circle cx="150" cy="100" r="60" fill="#09B7FF" opacity="0.1"/>
-                <path d="M150 50 C150 50 175 70 175 95 C175 115 162 130 150 130 C138 130 125 115 125 95 C125 70 150 50 150 50Z" fill="#09B7FF" opacity="0.4"/>
-                <path d="M130 120 Q150 145 170 120" fill="none" stroke="#09B7FF" stroke-width="3" stroke-linecap="round"/>
-                <circle cx="115" cy="85" r="8" fill="#09B7FF" opacity="0.5"/>
-                <circle cx="185" cy="80" r="6" fill="#09B7FF" opacity="0.4"/>
-              </svg>
+          <a href="blog/periodizar-entrenamiento-10k.html" class="blog-card" data-category="Entrenamiento">
+            <div class="blog-card__visual">
+              <img src="content/img/10kofi.jpg" alt="Periodización entrenamiento 10k" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span class="blog-card__category">Entrenamiento</span>
+                <span class="blog-card__date">24 Mar 2026</span>
+                <span class="blog-card__read">10 min</span>
+              </div>
+              <h3>Cómo periodizar tu entrenamiento para una carrera de 10K</h3>
+              <p>Plan de 12 semanas con bloques, distribución 80/20, semana tipo y tapering para llegar en forma a tu próximo 10K.</p>
+              <div class="blog-card__author">
+                <div class="author-avatar">FO</div>
+                <span>Francisco Orellana — Kinesiólogo</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="blog/dolor-lumbar-en-runners.html" class="blog-card" data-category="Quiropraxia">
+            <div class="blog-card__visual">
+              <img src="content/img/dolorlumbarrunners.webp" alt="Dolor lumbar en runners" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span class="blog-card__category">Quiropraxia</span>
+                <span class="blog-card__date">17 Mar 2026</span>
+                <span class="blog-card__read">9 min</span>
+              </div>
+              <h3>Dolor lumbar en runners: causas y tratamiento</h3>
+              <p>Por qué duele la espalda baja al correr, cómo identificar las señales de alerta y qué tratamiento funciona realmente.</p>
+              <div class="blog-card__author">
+                <div class="author-avatar">IA</div>
+                <span>Iñaki Achondo — Quiropráctico Deportivo</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="blog/que-comer-antes-de-entrenar.html" class="blog-card" data-category="Nutrición">
+            <div class="blog-card__visual">
+              <img src="content/img/blogcomida.jpg" alt="Qué comer antes de entrenar" style="width:100%;height:100%;object-fit:cover;">
             </div>
             <div class="blog-card__content">
               <div class="blog-card__meta">
@@ -228,73 +300,25 @@
             </div>
           </a>
 
-        </div>
+          <a href="blog/esguince-de-tobillo-rehabilitacion.html" class="blog-card" data-category="Kinesiología">
+            <div class="blog-card__visual">
+              <img src="content/img/esguincetobilloblog.png" alt="Esguince de tobillo" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span class="blog-card__category">Kinesiología</span>
+                <span class="blog-card__date">24 Feb 2026</span>
+                <span class="blog-card__read">10 min</span>
+              </div>
+              <h3>Esguince de tobillo: cómo rehabilitarlo correctamente</h3>
+              <p>Guía completa de rehabilitación: fases de recuperación, ejercicios recomendados y señales de cuándo volver al deporte.</p>
+              <div class="blog-card__author">
+                <div class="author-avatar">CM</div>
+                <span>Clemente Mewes — Kinesiólogo</span>
+              </div>
+            </div>
+          </a>
 
-        <!-- Próximos artículos -->
-        <div class="blog-coming-soon reveal">
-          <h3>Próximos artículos</h3>
-          <div class="coming-soon-list">
-            <div class="coming-soon-item">
-              <span class="blog-card__category">Quiropraxia</span>
-              <span>Dolor lumbar en runners: causas y tratamiento</span>
-            </div>
-            <div class="coming-soon-item">
-              <span class="blog-card__category">Entrenamiento</span>
-              <span>Cómo periodizar tu entrenamiento para una carrera de 10K</span>
-            </div>
-            <div class="coming-soon-item">
-              <span class="blog-card__category">Kinesiología</span>
-              <span>Tendinitis rotuliana: guía completa para ciclistas</span>
-            </div>
-            <div class="coming-soon-item">
-              <span class="blog-card__category">Nutrición</span>
-              <span>Suplementos para deportistas: qué funciona y qué no</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TEMAS -->
-    <section class="section">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-tag">Explora por tema</span>
-          <h2>Categorías del blog</h2>
-        </div>
-        <div class="categories-grid reveal">
-          <div class="category-card">
-            <div class="category-card__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-            </div>
-            <h3>Quiropraxia</h3>
-            <p>Ajustes, dolor musculoesquelético y rendimiento articular para deportistas.</p>
-            <span class="category-count">1 artículo</span>
-          </div>
-          <div class="category-card">
-            <div class="category-card__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-            </div>
-            <h3>Kinesiología</h3>
-            <p>Rehabilitación de lesiones, prevención y vuelta al deporte.</p>
-            <span class="category-count">1 artículo</span>
-          </div>
-          <div class="category-card">
-            <div class="category-card__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
-            </div>
-            <h3>Nutrición</h3>
-            <p>Alimentación para rendir más, composición corporal y suplementación.</p>
-            <span class="category-count">1 artículo</span>
-          </div>
-          <div class="category-card">
-            <div class="category-card__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-            </div>
-            <h3>Entrenamiento</h3>
-            <p>Planificación, periodización y programas para todos los niveles.</p>
-            <span class="category-count">Próximamente</span>
-          </div>
         </div>
       </div>
     </section>
@@ -306,8 +330,8 @@
           <h2>¿Tienes una pregunta específica?</h2>
           <p>Nuestro equipo puede responderte directamente. Agenda una consulta o escríbenos por WhatsApp.</p>
           <div class="cta-banner__actions">
-            <a href="https://reserva.kalud.cl/agendar" target="_blank" rel="noopener" class="btn btn--white" data-track="blog_cta_agendar">Agendar con un especialista</a>
-            <a href="https://wa.me/56987376068" target="_blank" rel="noopener" class="btn btn--outline-white">Preguntar por WhatsApp</a>
+            <a href="https://reserva.kalud.cl/agendar" target="_blank" rel="noopener" class="btn btn--primary" data-track="blog_cta_agendar">Agendar con un especialista</a>
+            <a href="https://wa.me/56987376068" target="_blank" rel="noopener" class="btn btn--outline">Preguntar por WhatsApp</a>
           </div>
         </div>
       </div>
@@ -319,5 +343,34 @@
 
   <script src="js/components.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    (function () {
+      var pills = document.querySelectorAll('.blog-filter__pill');
+      var cards = document.querySelectorAll('[data-category]');
+      var featuredSection = document.getElementById('featured-section');
+
+      pills.forEach(function (pill) {
+        pill.addEventListener('click', function () {
+          pills.forEach(function (p) { p.classList.remove('blog-filter__pill--active'); });
+          pill.classList.add('blog-filter__pill--active');
+
+          var filter = pill.dataset.filter;
+
+          // El artículo destacado solo aparece en "Todos"
+          if (featuredSection) {
+            featuredSection.style.display = filter === 'todos' ? '' : 'none';
+          }
+
+          cards.forEach(function (card) {
+            if (filter === 'todos' || card.dataset.category === filter) {
+              card.style.display = '';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

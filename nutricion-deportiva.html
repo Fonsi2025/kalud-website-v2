@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
   <title>Nutrición Deportiva en Vitacura | Planes Personalizados | Kalud</title>
   <meta name="description" content="Nutrición deportiva personalizada en Vitacura y Buin. Planes de alimentación para rendir más, perder grasa y ganar músculo. Agenda con Bernardita Velasco, nutricionista deportiva.">
   <meta name="keywords" content="nutricionista deportiva vitacura, nutrición deportiva santiago, plan nutricional deportivo, nutricionista buin, dieta deportiva chile, alimentación rendimiento deportivo">
   <link rel="canonical" href="https://kalud.cl/nutricion-deportiva.html">
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="content/img/favicon/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="content/img/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="content/img/favicon/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="content/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="content/img/favicon/faviconoficialtrans.png">
+  
+  
+  <link rel="apple-touch-icon" href="content/img/favicon/faviconoficialtrans.png">
   <link rel="manifest" href="content/img/favicon/site.webmanifest">
   <link rel="alternate" hreflang="es-CL" href="https://kalud.cl/nutricion-deportiva.html">
   <link rel="alternate" hreflang="es" href="https://kalud.cl/nutricion-deportiva.html">
@@ -149,49 +150,31 @@
 
   <main>
 
-    <!-- HERO VIDEO -->
-    <section style="position:relative;overflow:hidden;height:85vh;min-height:520px;">
-
-      <!-- YouTube background — pointer-events:none on iframe directly -->
-      <iframe
-        id="yt-hero-iframe"
-        src="https://www.youtube.com/embed/W7NFoCfXAXU?autoplay=1&mute=1&loop=1&playlist=W7NFoCfXAXU&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:177.78vh;height:56.25vw;min-width:100%;min-height:100%;border:none;pointer-events:none;"
-      ></iframe>
-
-      <!-- Dark overlay -->
-      <div style="position:absolute;inset:0;background:rgba(0,0,0,0.52);"></div>
-
-      <!-- Content — bottom-left, sin container centrado -->
-      <div style="position:absolute;bottom:60px;left:0;right:0;z-index:2;padding:0 48px;">
-        <div style="max-width:760px;">
-          <span style="display:block;font-size:0.72rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.65);margin-bottom:14px;">Nutrición Deportiva · Vitacura & Buin</span>
-          <h1 style="font-size:clamp(2rem,4vw,3.25rem);font-weight:800;text-transform:uppercase;color:#fff;line-height:1.1;margin:0 0 20px;">Alimentación que <span style="color:#09B7FF;">potencia</span> tu rendimiento</h1>
-          <p style="font-size:1.0625rem;color:rgba(255,255,255,0.82);max-width:580px;margin:0 0 36px;line-height:1.65;">Planes de nutrición personalizados para deportistas. Más energía, mejor composición corporal y recuperación optimizada, basados en ciencia y adaptados a tu deporte.</p>
-          <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px;">
+    <!-- HERO -->
+    <section class="page-hero page-hero--with-bg">
+      <img class="page-hero__bg-img page-hero__bg-img--natural" src="content/img/nutrihero.webp" alt="" aria-hidden="true">
+      <div class="page-hero__bg-overlay"></div>
+      <div class="container">
+        <div class="page-hero__content">
+          <span class="page-hero__tag">Nutrición Deportiva · Vitacura & Buin</span>
+          <h1 class="page-hero__title">Alimentación que <span class="text-blue">potencia</span> tu rendimiento</h1>
+          <p class="page-hero__desc">Lo que comes determina cómo entrenas, cómo recuperas y cómo progresas. En Kalud diseñamos planes nutricionales reales — sin dietas genéricas, sin suplementos de moda — adaptados a tu deporte, tu cuerpo y tu estilo de vida.</p>
+          <div class="page-hero__actions">
             <a href="https://reserva.kalud.cl/agendar" target="_blank" rel="noopener" class="btn btn--primary" data-track="nutricion_hero_agendar">Agendar consulta</a>
-            <a href="https://wa.me/56987376068" target="_blank" rel="noopener" class="btn btn--outline" style="color:#fff;border-color:rgba(255,255,255,0.5);">Consultar por WhatsApp</a>
+            <a href="https://wa.me/56987376068" target="_blank" rel="noopener" class="btn btn--outline">Consultar por WhatsApp</a>
           </div>
-          <div style="display:flex;gap:40px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,0.15);">
-            <div>
-              <strong style="display:block;font-size:0.72rem;color:rgba(255,255,255,0.55);text-transform:uppercase;letter-spacing:0.1em;font-weight:600;margin-bottom:4px;">Modalidad</strong>
-              <span style="font-size:1.1rem;font-weight:600;color:#fff;">Presencial & online</span>
+          <div class="page-hero__stats">
+            <div class="page-hero__stat">
+              <strong>Modalidad</strong>
+              <span>Presencial & online</span>
             </div>
-            <div>
-              <strong style="display:block;font-size:0.72rem;color:rgba(255,255,255,0.55);text-transform:uppercase;letter-spacing:0.1em;font-weight:600;margin-bottom:4px;">Disponible en</strong>
-              <span style="font-size:1.1rem;font-weight:600;color:#fff;">Vitacura & Buin</span>
+            <div class="page-hero__stat">
+              <strong>Disponible en</strong>
+              <span>Vitacura & Buin</span>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- Pause / Play button -->
-      <button id="hero-video-toggle" onclick="toggleHeroVideo()" aria-label="Pausar o reproducir video" style="position:absolute;bottom:20px;right:24px;z-index:3;background:rgba(0,0,0,0.45);border:2px solid rgba(255,255,255,0.55);border-radius:4px;padding:7px 11px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;">
-        <svg id="hero-pause-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
-        <svg id="hero-play-icon"  xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white" style="display:none;"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-      </button>
     </section>
 
     <!-- QUÉ ES -->
@@ -213,7 +196,7 @@
           </div>
           <div class="split-layout__visual reveal-right">
             <div style="width:100%;height:100%;border-radius:12px;overflow:hidden;min-height:300px;">
-              <img src="content/img/nutrihero.webp" alt="Nutrición Deportiva" style="width:100%;height:100%;object-fit:cover;min-height:300px;">
+              <img src="content/img/tabla-de-alimentos-saludables.webp" alt="Nutrición Deportiva" style="width:100%;height:100%;object-fit:cover;min-height:300px;">
             </div>
           </div>
         </div>
