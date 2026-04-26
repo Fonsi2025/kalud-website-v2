@@ -1016,6 +1016,10 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 @media (max-width: 1023px) {
   .review-card { flex: 0 0 calc((100% - 24px) / 2); }
 }
+/* Desktop: soften review card blue */
+@media (min-width: 1024px) {
+  .review-card { background: rgba(9, 183, 255, 0.55); }
+}
 /* Mobile: 1 card */
 @media (max-width: 640px) {
   .reviews-carousel { margin-top: 40px; }
