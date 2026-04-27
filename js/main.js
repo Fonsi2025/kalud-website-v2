@@ -148,20 +148,28 @@
     }
   };
 
-  // Track CTA clicks
-  document.querySelectorAll('[data-track]').forEach(el => {
-    el.addEventListener('click', () => {
-      window.trackEvent('CTA', 'click', el.dataset.track);
+  function attachAnalyticsListeners() {
+    // Track CTA clicks
+    document.querySelectorAll('[data-track]:not([data-analytics-attached])').forEach(el => {
+      el.setAttribute('data-analytics-attached', 'true');
+      el.addEventListener('click', () => {
+        window.trackEvent('CTA', 'click', el.dataset.track);
+      });
     });
-  });
 
-  // Track WhatsApp and Booking clicks
-  document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(el => {
-    el.addEventListener('click', () => window.trackEvent('Contact', 'whatsapp_click', document.title));
-  });
-  document.querySelectorAll('a[href*="kalud-agenda"]').forEach(el => {
-    el.addEventListener('click', () => window.trackEvent('Booking', 'booking_click', document.title));
-  });
+    // Track WhatsApp and Booking clicks
+    document.querySelectorAll('a[href*="wa.me"]:not([data-analytics-attached]), a[href*="whatsapp"]:not([data-analytics-attached])').forEach(el => {
+      el.setAttribute('data-analytics-attached', 'true');
+      el.addEventListener('click', () => window.trackEvent('Contact', 'whatsapp_click', document.title));
+    });
+    document.querySelectorAll('a[href*="kalud-agenda"]:not([data-analytics-attached])').forEach(el => {
+      el.setAttribute('data-analytics-attached', 'true');
+      el.addEventListener('click', () => window.trackEvent('Booking', 'booking_click', document.title));
+    });
+  }
+
+  attachAnalyticsListeners();
+  document.addEventListener('DOMContentLoaded', attachAnalyticsListeners);
 
   /*    TABS                                                    */
   document.querySelectorAll('[data-tab-trigger]').forEach(trigger => {
@@ -196,37 +204,6 @@
       triggers[0].classList.add('active');
     }
   });
-
-  /*    STICKY SIDEBAR (blog article)                         */
-  const tocLinks = document.querySelectorAll('.article-toc a');
-  if (tocLinks.length) {
-    const sections = Array.from(tocLinks).map(link => {
-      const id = link.getAttribute('href').replace('#', '');
-      return document.getElementById(id);
-    }).filter(Boolean);
-
-    window.addEventListener('scroll', () => {
-      let current = sections[0];
-      sections.forEach(sec => {
-        if (window.scrollY >= sec.offsetTop - 120) current = sec;
-      });
-      tocLinks.forEach(link => {
-        link.style.color = link.getAttribute('href') === '#' + current?.id
-          ? 'var(--blue)' : '';
-      });
-    }, { passive: true });
-  }
-
-  /*    BACK TO TOP                                            */
-  const backTop = document.querySelector('.back-to-top');
-  if (backTop) {
-    window.addEventListener('scroll', () => {
-      backTop.classList.toggle('visible', window.scrollY > 400);
-    }, { passive: true });
-    backTop.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  }
 
   /*    EXPERTISE CAROUSEL                                     */
   const expertiseScroll = document.getElementById('expertise-scroll');
